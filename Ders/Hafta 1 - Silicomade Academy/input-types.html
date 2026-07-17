@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Input Types</title>
+</head>
+<body>
+    <form action="" method="post">
+        <table>
+            <tr>
+                <td><label for="i1">İsim:</label></td>
+                <td><input id="i1" type="text" name="isim" placeholder="Adınız Soyadınız"/></td>
+            </tr>
+            <tr>
+                <td><label for="i2">Yaş:</label></td>
+                <td><input id="i2" type="number" name="yas" value="23"/></td>
+            </tr>
+            <tr>
+                <td><label for="i3">Email:</label></td>
+                <td><input id="i3" type="email" name="mail-adresi"/></td>
+            </tr>
+            <tr>
+                <td><label for="i4">Şifre:</label></td>
+                <td><input id="i4" type="password" name="sifre"/></td>
+            </tr>
+            <tr>
+                <td><label for="i5">Telefon No:</label></td>
+                <td><input id="i5" type="tel" name="telefon" placeholder="544 900 42 34" /></td>
+            </tr>
+            <tr>
+                <td><label for="i6">Doğum Tarihi:</label></td>
+                <td><input id="i6" type="date" name="dogum-tarihi" /></td>
+            </tr>
+            <tr>
+                <td><label for="i7">Saat:</label></td>
+                <td><input id="i7" type="time" name="saat" /></td>
+            </tr>
+           <tr>
+                <td><label for="i8">Tarih-Saat:</label></td>
+                <td><input id="i8" type="datetime-local" name="tarih-saat" /></td>
+            </tr>
+           <tr>
+                <td><label for="i9">Ay:</label></td>
+                <td><input id="i9" type="month" name="ay" /></td>
+            </tr>
+           <tr>
+                <td><label for="i10">Hafta:</label></td>
+                <td><input id="i10" type="week" name="hafta" /></td>
+            </tr>
+
+           <tr>
+                <td><label for="i11">Renk:</label></td>
+                <td><input id="i11" type="color" name="renk" /></td>
+            </tr>
+           <tr>
+                <td><label>Bildiğiniz Diller:</label></td>
+                <td>
+                    <input id="dil1" type="checkbox" name="diller" value="html" />
+                    <label for="dil1">HTML</label><br>
+                    <input id="dil2" type="checkbox" name="diller" value="css"/>
+                    <label for="dil2">CSS</label><br>
+                    <input id="dil3" type="checkbox" name="diller" value="js"/>
+                    <label for="dil3">JS</label><br>
+                    <input id="dil4" type="checkbox" name="diller" value="c#"/>
+                    <label for="dil4">C#</label><br>
+                </td>
+            </tr>
+           <tr>
+                <td><label>Cinsiyet:</label></td>
+                <td>
+                    <input id="c1" type="radio" name="cinsiyet" value="m" />
+                    <label for="c1">Erkek</label><br>
+                    <input id="c2" type="radio" name="cinsiyet" value="f"/>
+                    <label for="c2">Kadın</label><br>
+                    <input id="c3" type="radio" name="cinsiyet" value="o"/>
+                    <label for="c3">Diğer</label><br>
+                </td>
+            </tr>
+           <tr>
+                <td><label for="i12">Profil Fotoğrafı:</label></td>
+                <td><input id="i12" type="file" name="profile-picture"/></td>
+            </tr>
+           <tr>
+                <td><label for="i13">Zorluk Seviyesi:</label></td>
+                <td><input id="i13" type="range" name="zorluk" min="0" max="5" step="1"/></td>
+            </tr>
+           <tr>
+                <td><label for="i14">Öz geçmiş:</label></td>
+                <td> <textarea id="i14" name="oz-gecmis" cols="50" rows="10" maxlength="250"></textarea> </td>
+            </tr>
+
+           <tr>
+                <td><label for="i15">Şehir</label></td>
+                <td> 
+                    <select name="sehir" required>
+                        <option value="" selected disabled >Seçiniz</option>
+                        <option value="01">Adana</option>
+                        <option value="07">Antalya</option>
+                        <option value="34">İstanbul</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" value="Gönder"/></td>
+            </tr>
+        </table>
+        
+        
+    </form>
+</body>
+</html>
