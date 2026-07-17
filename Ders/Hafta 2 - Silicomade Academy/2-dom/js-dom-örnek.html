@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Giriş</title>
+    <style>
+        .alti-cizili {
+            text-decoration: underline;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="b-1">Başlık</h1>
+
+    <img id="img-1" />
+
+    <ul id="liste-1"></ul>
+
+    <table id="tablo-1">
+        <tr>
+            <th>Numara</th>
+            <th>Ad</th>
+            <th>Soyad</th>
+        </tr>
+    </table>
+
+    <script>
+
+        const ogrenciler = [
+            { ad: "Kemal", soyad: "Uysal", numara: 1 },
+            { ad: "Abdullah", soyad: "Şeher", numara: 2 },
+            { ad: "Mira", soyad: "Taşkın", numara: 3 },
+            { ad: "Mustafa", soyad: "Ünal", numara: 4 }
+        ];
+
+        // Başlığı düzenle
+        const baslik1 = document.getElementById("b-1");
+
+        baslik1.textContent = "BE132";
+        baslik1.style.color = "red";
+        baslik1.classList.add("alti-cizili");
+        baslik1.setAttribute("title", "Bu bir başlıktır");
+
+        // Resim ekle
+        const img1 = document.getElementById("img-1");
+
+        img1.setAttribute(
+            "src",
+            "https://picsum.photos/id/233/200/300"
+        );
+
+        // Listeye eleman ekle
+        const liste1 = document.getElementById("liste-1");
+
+        const li = document.createElement("li");
+        li.textContent = "Öğe 1";
+
+        liste1.appendChild(li);
+
+        // Tabloya öğrencileri ekle
+        const tablo1 = document.getElementById("tablo-1");
+
+        ogrenciler.forEach(function (ogrenci) {
+
+            const satir = document.createElement("tr");
+
+            const numaraHucre = document.createElement("td");
+            numaraHucre.textContent = ogrenci.numara;
+
+            const adHucre = document.createElement("td");
+            adHucre.textContent = ogrenci.ad;
+
+            const soyadHucre = document.createElement("td");
+            soyadHucre.textContent = ogrenci.soyad;
+
+            satir.appendChild(numaraHucre);
+            satir.appendChild(adHucre);
+            satir.appendChild(soyadHucre);
+
+            tablo1.appendChild(satir);
+        });
+
+    </script>
+
+</body>
+</html>
